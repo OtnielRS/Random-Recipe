@@ -1,0 +1,35 @@
+#text-random {
+    display: flex;
+    flex-direction: column;
+    background-color: #EFDECD;
+    border: 5px solid black;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    width: 100%;
+    background-color: bisque;
+}
+
+div .list {
+    display: flex;
+    flex-direction: row;
+}
+
+.nama-resep {
+    font-size: 2em;
+    margin-left: 10px;
+}
+
+.list {
+    display: inline;
+}
+
+.daftar {
+    width: 50%;
+    margin-left: 5%;
+    font-size: 1.5em;
+}
+
