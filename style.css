@@ -33,3 +33,10 @@ div .list {
     font-size: 1.5em;
 }
 
+.link-Video {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    right: 50px;
+}
+
