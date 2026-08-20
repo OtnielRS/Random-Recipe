@@ -1,7 +1,6 @@
 let rawData = localStorage.getItem("resep");
 let data = JSON.parse(rawData);
 
-
 // ------------ global Data -----------//
 
 let array = [];
@@ -73,7 +72,7 @@ function updateHistory(array, input) {
 }
 
 function historyToHTML(array) {
-  let data = array
+  let data = array;
   // console.log(data);
 
   let listHistori = document.getElementById("history");
@@ -105,55 +104,82 @@ function removeHistory() {
 }
 
 function generateNumber(number) {
-  let temp = Math.floor(Math.random() * data.length)
+  let temp = Math.floor(Math.random() * data.length);
   if (number === temp) {
-    temp = Math.floor(Math.random() * data.length)
-    angkaNext = temp
+    temp = Math.floor(Math.random() * data.length);
+    angkaNext = temp;
   }
-  return temp
+  return temp;
 }
 
 function sambutan() {
-  let nama = localStorage.getItem("userNama")
-  let target = document.getElementById("entry")
-  target.innerHTML = `Halo ${nama}, Selamat datang di program "Random Recipe"`
+  let nama = localStorage.getItem("userNama");
+  let target = document.getElementById("entry");
+  target.innerHTML = `Halo ${nama}, Selamat datang di program "Random Recipe"`;
 }
 
+function resetVideo() {
+  let target = document.getElementById("iFrameVideo")
+  target.innerHTML = ''
+}
+
+function addVideo(data, number) {
+  resetVideo()
+ 
+  const temp = document.getElementById("iFrameVideo");
+
+  const iframe = document.createElement('iframe')
+
+
+  let linkVideo = data[number].embed
+  iframe.src = linkVideo; 
+  iframe.width = "560";
+  iframe.height = "315";
+  iframe.title = "Youtube video player"; 
+  iframe.style.border = "none"; 
+  iframe.referrerPolicy = "strict-origin-when-cross-origin"
+
+  iframe.setAttribute(
+    "allow",
+    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+  );
+  iframe.setAttribute("allowfullscreen", "true");
+
+  temp.appendChild(iframe);
+}
 
 function mainFunction() {
   // console.log("Hello World");
-  let randomNum = generateNumber(angkaNext)
-  let namaResep = generateNama(data, randomNum)
-  let lastHistory = namaResep
+  let randomNum = generateNumber(angkaNext);
+  let namaResep = generateNama(data, randomNum);
+  let lastHistory = namaResep;
   if (namaResep === lastHistory) {
-    randomNum = generateNumber(angkaNext)
-    namaResep = generateNama(data, randomNum)
+    randomNum = generateNumber(angkaNext);
+    namaResep = generateNama(data, randomNum);
   }
-  removeElementLi()
-  generateBahan(data,randomNum)
-  generateCaraMasak(data,randomNum)
-  updateHistory(array, namaResep)
-  historyToHTML(array)
+  removeElementLi();
+  generateBahan(data, randomNum);
+  generateCaraMasak(data, randomNum);
+  updateHistory(array, namaResep);
+  historyToHTML(array);
+  addVideo(data, randomNum)
 }
 
 
 
-
-const randomBtn = document.getElementById("random-btn").addEventListener("click", mainFunction)
-const removeBtn = document.getElementById("remove-btn").addEventListener("click", removeHistory);
-const logOutBtn = document.getElementById("logout")
+const randomBtn = document
+  .getElementById("random-btn")
+  .addEventListener("click", mainFunction);
+const removeBtn = document
+  .getElementById("remove-btn")
+  .addEventListener("click", removeHistory);
+const logOutBtn = document.getElementById("logout");
 
 logOutBtn.addEventListener("click", (e) => {
   e.defaultPrevented;
-  window.location.href = 'index.html'
-  localStorage.clear()
-})
+  window.location.href = "index.html";
+  localStorage.clear();
+});
 
-
-localStorage.setItem("historiRandom", JSON.stringify(array))
+localStorage.setItem("historiRandom", JSON.stringify(array));
 sambutan();
-
-
-
-
-
