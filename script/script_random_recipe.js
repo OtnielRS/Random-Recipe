@@ -101,6 +101,14 @@ function removeHistory() {
   localStorage.removeItem("historiRandom");
 }
 
+function setVideo(data, number) {
+  let rawData = data[number]
+  let linkVideo = rawData.link
+  // console.log(linkVideo);
+  let anchorPoint = document.getElementsByClassName("link-Video")[0]
+  anchorPoint.setAttribute("href", linkVideo)
+}
+
 let array = [];
 let lastIndex = -1;
 function mainFunction() {
@@ -112,9 +120,9 @@ function mainFunction() {
   let nama = generateNama(master, temp);
   generateBahan(master, temp);
   generateCaraMasak(master, temp);
-  let test = updateHistory(array, nama);
+  setVideo(master, temp);
+  updateHistory(array, nama);
   localStorage.setItem("historiRandom", JSON.stringify(array))
-  console.log(array);
   historyToHTML();
 }
 
@@ -127,4 +135,4 @@ const removeBtn = document
   .getElementById("remove-btn")
   .addEventListener("click", removeHistory);
 
-mainFunction();
+mainFunction()
