@@ -2,92 +2,106 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
-    <!-- ================= LOGIN VIEW ================= -->
-<div class="view active" id="loginView">
-  <header>
-    <div>
-      <span class="brand-eyebrow">Dapur Digital!</span><br>
-      <span class="brand-title">Buku Resep Acak</span>
-    </div>
-    <div class="header-note">
-      Bingung mau masak apa? Kocok halaman ini dan biarkan resep berikut yang menentukan pilihanmu!
-    </div>
-  </header>
-
-  <main id="loginMain">
-    <form class="login-card" id="loginForm" novalidate>
-      <div class="pin"></div>
-      <h1 class="page-title">Halaman Login</h1>
-      <div class="title-rule"></div>
-
-      <div class="field" id="namaField">
-        <label for="nama">Nama</label>
-        <input type="text" id="nama" placeholder="Nama Kamu">
-        <div class="error-msg">Nama tidak boleh kosong.</div>
+  <!-- ================= LOGIN VIEW ================= -->
+  <div class="view active" id="loginView">
+    <header>
+      <div>
+        <span class="brand-eyebrow">Dapur Digital!</span><br>
+        <span class="brand-title">Buku Resep Acak</span>
       </div>
-
-      <div class="field" id="emailField">
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="nama@gmail.com">
-        <div class="error-msg">Masukkan email yang valid.</div>
+      <div class="header-note">
+        Bingung mau masak apa? Kocok halaman ini dan biarkan resep berikut yang menentukan pilihanmu!
       </div>
+    </header>
 
-      <button type="submit" class="submit">Masuk</button>
-      <div class="hint">tenang, ini cuma disimpan di browser kamu kok 🍳</div>
-    </form>
-  </main>
-</div>
+    <main id="loginMain">
+      <form class="login-card" id="loginForm" novalidate>
+        <div class="pin"></div>
+        <h1 class="page-title">Halaman Login</h1>
+        <div class="title-rule"></div>
+
+        <div class="field" id="namaField">
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" placeholder="Nama Kamu">
+          <div class="error-msg">Nama tidak boleh kosong.</div>
+        </div>
+
+        <div class="field" id="emailField">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="nama@gmail.com">
+          <div class="error-msg">Masukkan email yang valid.</div>
+        </div>
+
+        <button type="submit" class="submit">Masuk</button>
+        <div class="hint">tenang, ini cuma disimpan di browser kamu kok 🍳</div>
+      </form>
+    </main>
+  </div>
+
+
+
+  <!-- Random Page -->
+  <div id="second-page">
     <div class="container my-5">
-        <div class="p-5 text-center bg-body-tertiary rounded-3">
-            <h1 class="text-body-emphasis">Dashboard</h1>
-        </div>
+      <div class="p-5 text-center bg-body-tertiary rounded-3">
+        <h1 class="text-body-emphasis">Dashboard</h1>
+      </div>
     </div>
-    <button id="random-btn">Click Me</button>
+    <button id="random-btn">Random the Recipe!</button>
+    <br>
+    <br>
     <div id="text-random">
-        <h2 class="nama-resep">Nasi Goreng</h2>
-        <div class="list">
-            <div class="daftar">
-                <h3>List Bahan</h3>
-                <ol id="bahan">
-                    
-                </ol>
-            </div>
-            <div class="daftar cara">
-                <h3>Cara masak</h3>
-                <ol id="cara">
+      <h2 class="nama-resep">Nasi Goreng</h2>
+      <div class="list">
+        <div class="daftar">
+          <h3>List Bahan</h3>
+          <ol id="bahan">
 
-                </ol>
-            </div>
+          </ol>
         </div>
+        <div class="daftar cara">
+          <h3>Cara masak</h3>
+          <ol id="cara">
 
-        <div class="link Vidio">
-            <a href="" class="link-Video" target="_blank">Link Video</a>
+          </ol>
         </div>
+      </div>
+      <div class="link Vidio">
+        <a href="" class="link-Video" target="_blank">Link Video</a>
+      </div>
     </div>
 
     <br>
     <br>
     <br>
     <!-- History -->
-    <h2>History</h2>
-     <div class="list">
-        <ol id="history">
+    <div id="riwayat">
+      <h2>History</h2>
 
-        </ol>
-     </div>
+    </div>
 
-     <button id="remove-btn">Hapus History</button>
+
+
+    <div class="list">
+      <ol id="history">
+
+      </ol>
+    </div>
+    <button id="remove-btn">Hapus History</button>
+
     <script src="./script/randomReciep.js"></script>
     <script src="./script/script_random_recipe.js"></script>
+  </div>
+
 </body>
 
 </html>
