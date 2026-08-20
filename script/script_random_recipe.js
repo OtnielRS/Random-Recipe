@@ -1,10 +1,13 @@
-// console.log(data);
-let data = localStorage.getItem("resep");
-let master;
+let rawData = localStorage.getItem("resep");
+let data = JSON.parse(rawData);
 
-if (data) {
-  master = JSON.parse(data);
-}
+
+// ------------ global Data -----------//
+
+let array = [];
+let angkaNext = -1;
+
+// -------------- Fungsi Random -------------//
 
 function removeElementLi() {
   let listBahan = document.getElementById("bahan");
@@ -29,7 +32,9 @@ function generateNama(data, number) {
 
   const judulResep = document.querySelector(".nama-resep");
   // console.log(judulResep);
+  // console.log(judulResep);
   judulResep.textContent = namaResep;
+  console.log(namaResep);
   return namaResep;
 }
 
@@ -67,9 +72,8 @@ function updateHistory(array, input) {
   }
 }
 
-function historyToHTML() {
-  let rawData = localStorage.getItem("historiRandom");
-  let data = JSON.parse(rawData);
+function historyToHTML(array) {
+  let data = array
   // console.log(data);
 
   let listHistori = document.getElementById("history");
@@ -100,64 +104,56 @@ function removeHistory() {
   localStorage.removeItem("historiRandom");
 }
 
-function setVideo(data, number) {
-  let rawData = data[number];
-  let linkVideo = rawData.link;
-  // console.log(linkVideo);
-  let anchorPoint = document.getElementsByClassName("link-Video")[0];
-  anchorPoint.setAttribute("href", linkVideo);
+function generateNumber(number) {
+  let temp = Math.floor(Math.random() * data.length)
+  if (number === temp) {
+    temp = Math.floor(Math.random() * data.length)
+    angkaNext = temp
+  }
+  return temp
 }
 
-let array = [];
-let lastIndex = -1;
+function sambutan() {
+  let nama = localStorage.getItem("userNama")
+  let target = document.getElementById("entry")
+  target.innerHTML = `Halo ${nama}, Selamat datang di program "Random Recipe"`
+}
+
+
 function mainFunction() {
-  do {
-    temp = Math.floor(Math.random() * master.length);
-  } while (temp === lastIndex);
-  lastIndex = temp;
-  removeElementLi();
-  let nama = generateNama(master, temp);
-  generateBahan(master, temp);
-  generateCaraMasak(master, temp);
-  setVideo(master, temp);
-  updateHistory(array, nama);
-  localStorage.setItem("historiRandom", JSON.stringify(array));
-  historyToHTML();
+  // console.log("Hello World");
+  let randomNum = generateNumber(angkaNext)
+  let namaResep = generateNama(data, randomNum)
+  let lastHistory = namaResep
+  if (namaResep === lastHistory) {
+    randomNum = generateNumber(angkaNext)
+    namaResep = generateNama(data, randomNum)
+  }
+  removeElementLi()
+  generateBahan(data,randomNum)
+  generateCaraMasak(data,randomNum)
+  updateHistory(array, namaResep)
+  historyToHTML(array)
 }
 
-// console.log(histori);
-// localStorage.setItem("history", JSON.stringify(histori))
-const randomBtn = document
-  .getElementById("random-btn")
-  .addEventListener("click", mainFunction);
-const removeBtn = document
-  .getElementById("remove-btn")
-  .addEventListener("click", removeHistory);
 
-mainFunction();
 
-//  -------------- login page save information -----------//
 
-function deletePage() {
-  let nama = document.getElementById("nama").value;
-  localStorage.setItem("nama", nama);
-  let email = document.getElementById("email").value;
-  localStorage.setItem("email", email);
-  let clear = document.getElementById("loginMain");
-  clear.innerHTML = "";
-  let judul = document.createElement("h2")
-  judul.innerHTML = `Hallo, ${nama}. Selamat datang di program "Random Recipe"`
-  let text = document.createElement("h2")
-  clear.appendChild(judul)
-}
+const randomBtn = document.getElementById("random-btn").addEventListener("click", mainFunction)
+const removeBtn = document.getElementById("remove-btn").addEventListener("click", removeHistory);
+const logOutBtn = document.getElementById("logout")
 
-const submitBtn = document
-  .getElementsByClassName("submit")[0].addEventListener("click", deletePage)
+logOutBtn.addEventListener("click", (e) => {
+  e.defaultPrevented;
+  window.location.href = 'index.html'
+  localStorage.clear()
+})
 
-  
-// Reference
 
-/**
- * https://stackoverflow.com/questions/46141450/create-li-from-loop-through-array-and-display-to-html-as-a-list
- * 
- */
+localStorage.setItem("historiRandom", JSON.stringify(array))
+sambutan();
+
+
+
+
+
