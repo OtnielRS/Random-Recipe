@@ -10,7 +10,7 @@ const recipe = [
       "Masukkan irisan daun bawang, aduk sebentar, lalu angkat dan sajikan hangat",
     ],
     link: "https://youtu.be/gDKz2o5UuaM?si=iezBwc9hRRMMq4gy",
-    embed: `<iframe width="560" height="315" src="https://www.youtube.com/embed/gDKz2o5UuaM?si=w9sq-Pv8TLrxy8uw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+    embed: `https://www.youtube.com/embed/gDKz2o5UuaM?si=w9sq-Pv8TLrxy8uw`
   },
 
   {
@@ -25,7 +25,7 @@ const recipe = [
       "Aduk cepat hingga semua bumbu dan bahan tercampur rata dan matang. Angkat dan sajikan.",
     ],
     link: "https://youtu.be/o4noixEiH_w?si=dDdevCF95lwWTNPZ",
-    embed: `<iframe width="560" height="315" src="https://www.youtube.com/embed/o4noixEiH_w?si=peYRCQY6otK5YMAO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+    embed: `https://www.youtube.com/embed/o4noixEiH_w?si=peYRCQY6otK5YMAO`
   },
 
   {
@@ -47,7 +47,7 @@ const recipe = [
       "Angkat, tiriskan, dan sajikan bersama sambal kecap cabai rawit.",
     ],
     link: "https://youtu.be/hPKPDZkn-4s?si=X7B5cRBFZ6krbebH",
-    embed: `<iframe width="560" height="315" src="https://www.youtube.com/embed/hPKPDZkn-4s?si=5m73bBukr6wnV871" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+    embed: `https://www.youtube.com/embed/hPKPDZkn-4s?si=5m73bBukr6wnV871`
   },
 
   {
@@ -71,7 +71,7 @@ const recipe = [
       "Penyajian: Susun soun, kol, ayam suwir, dan telur rebus dalam mangkuk. Tuangkan kuah soto panas, lalu taburi dengan bubuk koya, perasan jeruk nipis, dan sambal.",
     ],
     link: "https://youtu.be/WBAYOg9vTAE?si=SntcgVyoPM--hLmu",
-    embed: `<iframe width="560" height="315" src="https://www.youtube.com/embed/WBAYOg9vTAE?si=oGIc-ocGdCF4YNRr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+    embed: `https://www.youtube.com/embed/WBAYOg9vTAE?si=oGIc-ocGdCF4YNRr`
   },
   {
     nama: "Oreg Tempe Kecap",
@@ -97,7 +97,7 @@ const recipe = [
       "Masak sampai air menyusut kering habis",
     ],
     link: "https://youtu.be/L0IbYvJuZtY?si=06zKlIzk6f3VQXK5",
-    embed: `<iframe width="560" height="315" src="https://www.youtube.com/embed/L0IbYvJuZtY?si=AQSByqq1cl98poSa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+    embed: `https://www.youtube.com/embed/L0IbYvJuZtY?si=AQSByqq1cl98poSa`
   },
   {
     nama: "Telur Dadar Padang",
@@ -123,7 +123,7 @@ const recipe = [
       "Masak hingga kedua sisi matang merata",
     ],
     link: "https://youtu.be/ccN_rcnHpP4?si=FHUKDrSeOKVWeMJY",
-    embed: `<iframe width="560" height="315" src="https://www.youtube.com/embed/ccN_rcnHpP4?si=8WG8dO1HVG50QhB7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+    embed: `https://www.youtube.com/embed/ccN_rcnHpP4?si=8WG8dO1HVG50QhB7`
   },
   {
     nama: "Sayur Asem",
@@ -150,7 +150,7 @@ const recipe = [
       "Masak sebentar hingga semua sayur matang",
     ],
     link: "https://youtu.be/Ik62jxkjglg?si=nZGZWTICajoZMoyR",
-    embed: `<iframe width="560" height="315" src="https://www.youtube.com/embed/Ik62jxkjglg?si=_oScMqGOrAmZgvDB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+    embed: `https://www.youtube.com/embed/Ik62jxkjglg?si=_oScMqGOrAmZgvDB`
   },
   {
     nama: "Tumis Kangkung Terasi",
@@ -176,7 +176,7 @@ const recipe = [
       "Angkat segera agar warna tetap hijau segar.",
     ],
     link: "https://youtu.be/EVwKGDo6gB4?si=sBiTKjqv6M4ZKlxX",
-    embed: `<iframe width="560" height="315" src="https://www.youtube.com/embed/EVwKGDo6gB4?si=WPiGtgsNNM9Ap-nO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+    embed: `https://www.youtube.com/embed/EVwKGDo6gB4?si=WPiGtgsNNM9Ap-nO`
   },
 ];
 
