@@ -77,8 +77,104 @@ const recipe = [
             "Masukkan irisan daun bawang ke dalam kuah soto, koreksi rasa, lalu matikan api.",
             "Penyajian: Susun soun, kol, ayam suwir, dan telur rebus dalam mangkuk. Tuangkan kuah soto panas, lalu taburi dengan bubuk koya, perasan jeruk nipis, dan sambal."
         ]
+    },
+    {
+        nama: "Oreg Tempe Kecap",
+        bahan: [
+            "1 papan tempe (potong dadu kecil",
+            "3 sdm kecap manis",
+            "50 ml air",
+            "Minyak goreng secukupnya",
+            "4 butir bawang merah",
+            "2 siung bawang putih",
+            "3 buah cabai hijau besar",
+            "2 buah cabai rawit (opsional)",
+            "1 cm lengkuas (geprek)",
+            "1 lembar daun salam"
+        ],
+        langkah: [
+            "Goreng tempe hingga setengah matang, tiriskan",
+            "Tumis bawang merah dan putih hingga harum",
+            "Masukkan cabai, lengkuas, dan daun salam",
+            "Masukkan tempe goreng ke dalam tumisan",
+            "Tambahkan kecap manis, garam, dan air",
+            "Aduk rata hingga bumbu meresap sempurna",
+            "Masak sampai air menyusut kering habis"
+        ]
+    },
+    {
+        nama: "Telur Dadar Padang",
+        bahan: [
+            "3 butir telur ayam atau bebek",
+            "2 sdm tepung beras",
+            "2 batang daun bawang (iris halus)",
+            "1 lembar daun kunyit (iris halus)",
+            "3 butir bawang merah",
+            "2 siung bawang putih",
+            "3 buah cabai merah keriting",
+            "1/2 sdt ketumbar bubuk",
+            "Garam dan merica secukupnya"
+        ],
+        langkah: [
+            "Kocok lepas telur dalam mangkuk besar",
+            "Masukkan bumbu halus dan tepung beras",
+            "Masukkan daun bawang dan daun kunyit",
+            "Aduk seluruh bahan hingga rata sempurna",
+            "Panaskan minyak agak banyak di wajan",
+            "Tuang adonan telur dengan api kecil",
+            "Balik telur saat bagian bawah kecokelatan",
+            "Masak hingga kedua sisi matang merata",
+        ]
+    },
+    {
+        nama: "Sayur Asem",
+        bahan: [
+            "1 ikat kacang panjang (potong-potong)",
+            "1 buah jagung manis (potong dadu)",
+            "100 gr melinjo dan daunnya",
+            "1 buah labu siam (potong dadu)",
+            "3 buah asam jawa muda1 liter air",
+            "5 butir bawang merah (iris)",
+            "3 siung bawang putih (iris)",
+            "2 buah cabai merah (belah dua)",
+            "2 cm lengkuas (geprek)",
+            "2 lembar daun salam",
+            "Garam dan gula secukupnya"
+        ],
+        langkah: [
+            "Rebus air bersama bumbu iris dan geprek",
+            "Masukkan jagung dan melinjo terlebih dahulu",
+            "Masak hingga jagung mulai melunak matang",
+            "Masukkan labu siam dan asam jawa.",
+            "Masukkan kacang panjang dan daun melinjo",
+            "Tambahkan garam dan gula sesuai selera",
+            "Masak sebentar hingga semua sayur matang"
+        ]
+    },
+    {
+        nama: "Tumis Kangkung Terasi",
+        bahan: [
+            "1 ikat kangkung (siangi, cuci bersih)",
+            "1 sdt terasi bakar",
+            "50 ml air",
+            "2 sdm minyak untuk menumis",
+            "4 butir bawang merah",
+            "2 siung bawang putih",
+            "3 buah cabai rawit merah",
+            "1 buah tomat ukuran kecil",
+            "Garam dan gula secukupnya"
+        ],
+        langkah: [
+            "Tumis bawang merah, bawang putih, dan cabai.",
+            "Masukkan terasi bakar, hancurkan hingga harum rata.",
+            "Masukkan potongan tomat, tumis hingga agak layu.",
+            "Masukkan kangkung, besarkan api kompor Anda.",
+            "Tuang air sedikit agar bumbu cepat meresap.",
+            "Tambahkan garam dan gula sesuai selera Anda.",
+            "Aduk cepat hingga kangkung layu matang.",
+            "Angkat segera agar warna tetap hijau segar."
+        ]
     }
-    
 ]
 
 localStorage.setItem("resep", JSON.stringify(recipe))
