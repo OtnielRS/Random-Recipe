@@ -130,7 +130,7 @@ function addVideo(data, number) {
 
   const iframe = document.createElement('iframe')
 
-  // 3. Set properties and attributes
+
   let linkVideo = data[number].embed
   iframe.src = linkVideo; 
   iframe.width = "560";
@@ -139,14 +139,12 @@ function addVideo(data, number) {
   iframe.style.border = "none"; 
   iframe.referrerPolicy = "strict-origin-when-cross-origin"
 
-  // 4. Configure permissions for streaming videos
   iframe.setAttribute(
     "allow",
     "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
   );
   iframe.setAttribute("allowfullscreen", "true");
 
-  // 5. Inject the iframe into the target div
   temp.appendChild(iframe);
 }
 
